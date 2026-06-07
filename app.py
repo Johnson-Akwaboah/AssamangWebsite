@@ -73,7 +73,7 @@ def gallery():
     return render_template('gallery.html')
 
 
-@app.route('/announcement')
+@app.route('/announcements')
 def announcements():
     return render_template('announcement.html')
 
@@ -85,5 +85,7 @@ def contact():
 # RUN APP
 # ==========================================
 if __name__ == '__main__':
-
+   
     app.run(debug=True)
+    
+

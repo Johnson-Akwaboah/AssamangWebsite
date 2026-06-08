@@ -2,19 +2,7 @@ from flask import Flask, render_template
 import os
 import sys
 
-def resource_path(relative_path):
-    try:
-        base_path = sys._MEIPASS
-    except Exception:
-        base_path = os.path.abspath(".")
-
-    return os.path.join(base_path, relative_path)
-
-app = Flask(
-    __name__,
-    template_folder=resource_path('templates'),
-    static_folder=resource_path('static')
-)
+app = Flask(__name__,)
 
 # ==========================================
 # HOME PAGE
@@ -85,7 +73,7 @@ def gallery():
     return render_template('gallery.html')
 
 
-@app.route('/announcements')
+@app.route('/announcement')
 def announcements():
     return render_template('announcement.html')
 

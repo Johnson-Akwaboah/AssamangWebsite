@@ -1,8 +1,6 @@
 from flask import Flask, render_template
 import os
 import sys
-# import webbrowser
-# from threading import Timer
 
 def resource_path(relative_path):
     try:
@@ -66,13 +64,6 @@ def home():
         projects=projects
     )
     
-# ==========================================
-# DASHBOARD
-# ==========================================
-@app.route('/dashboard')
-def dashboard():
-    return render_template('dashboard.html')
-
 
 @app.route('/about')
 def about():
@@ -97,12 +88,6 @@ def gallery():
 @app.route('/announcements')
 def announcements():
     return render_template('announcement.html')
-
-
-@app.route('/leadership')
-def leadership():
-    return render_template('leadership.html')
-
 
 @app.route('/contact')
 def contact():

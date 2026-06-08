@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <!-- PAGE HEADER -->
+    <div class="text-center mb-5">
+
+        <h1 class="fw-bold">
+            Community Projects
+        </h1>
+
+        <p class="text-muted">
+            Development projects undertaken to improve
+            the lives of people in Domi Assamang.
+        </p>
+
+    </div>
+
+    <div class="row">
+
+        <!-- PROJECT 1 -->
+        <div class="col-md-4 mb-4">
+
+            <div class="card shadow h-100">
+
+                <img src="{{ url_for('static', filename='images/projects/project2.jpeg') }}" class="img-fluid"
+                    style="height:250px; object-fit:cover;" alt="Community Center Construction Project">
+
+                <div class="card-body">
+
+                    <h5 class="fw-bold">
+                        Community Center Project
+                    </h5>
+
+                    <p>
+                        Construction of a modern community center
+                        to host meetings, youth programs and social events.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="col-md-4 mb-4">
+
+            <div class="card shadow h-100">
+
+                <img src="{{ url_for('static', filename='images/projects/Edu Sup.jpeg') }}" class="img-fluid"
+                    style="height:250px; object-fit:cover;" alt="Educational Support Project">
+
+                <div class="card-body">
+
+                    <h5 class="fw-bold">
+                        Educational Support
+                    </h5>
+
+                    <p>
+                        Providing learning materials, mentorship
+                        and scholarships for students in the community.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="col-md-4 mb-4">
+
+            <div class="card shadow h-100">
+
+                <img src="{{ url_for('static', filename='images/projects/com health.png') }}" class="img-fluid"
+                    style="height:250px; object-fit:cover;" alt="Community Health Project">
+
+                <div class="card-body">
+
+                    <h5 class="fw-bold">
+                        Community Health Program
+                    </h5>
+
+                    <p>
+                        Organizing health screening exercises,
+                        awareness campaigns and medical outreach programs.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- PROJECT 4 -->
+        <div class="col-md-4 mb-4">
+
+            <div class="card shadow h-100">
+
+                <img src="{{ url_for('static', filename='images/projects/Roads.jpeg') }}" class="img-fluid"
+                    style="height:250px; object-fit:cover;" alt="Road Improvement Project">
+
+                <div class="card-body">
+
+                    <h5 class="fw-bold">
+                        Road Improvement
+                    </h5>
+
+                    <p>
+                        Supporting the maintenance and improvement
+                        of roads connecting key parts of the community.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- PROJECT 5 -->
+        <div class="col-md-4 mb-4">
+
+            <div class="card shadow h-100">
+
+                <img src="{{ url_for('static', filename='images/events/event.jpg') }}" class="img-fluid"
+                    style="height:250px; object-fit:cover;" alt="Youth Empowerment Project">
+
+                <div class="card-body">
+
+                    <h5 class="fw-bold">
+                        Youth Empowerment
+                    </h5>
+
+                    <p>
+                        Skills training, entrepreneurship support
+                        and leadership development for young people.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- PROJECT 6 -->
+        <div class="col-md-4 mb-4">
+
+            <div class="card shadow h-100">
+
+                <img src="{{ url_for('static', filename='images/projects/Ghanawt.jpg') }}" class="img-fluid"
+                    style="height:250px; object-fit:cover;" alt="Water Supply Project">
+
+                <div class="card-body">
+
+                    <h5 class="fw-bold">
+                        Water Supply Initiative
+                    </h5>
+
+                    <p>
+                        Improving access to clean and safe water
+                        for households within the community.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

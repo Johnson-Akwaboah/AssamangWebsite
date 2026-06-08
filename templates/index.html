@@ -1,0 +1,381 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+
+<section class="hero-section">
+
+    <div class="hero-overlay">
+
+        <div class="container text-center text-white">
+
+            <h1 class="display-2 fw-bold mb-4">
+                Domi Assamang Community
+            </h1>
+
+            <p class="lead mb-5">
+                A united community driving development,
+                education, empowerment and social progress
+                for everyone.
+            </p>
+
+            <a href="/events" class="btn btn-outline-light btn-lg px-5 py-3">
+                Explore Events
+            </a>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+<!-- FEATURES -->
+
+<div class="container mt-5">
+
+
+    <h2 class="text-center fw-bold mb-4">
+        What We Do
+    </h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+
+            <div class="card p-4 text-center shadow-sm h-100">
+
+                <h4>Community Development</h4>
+
+                <p>
+                    Supporting local projects, infrastructure
+                    and community growth.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card p-4 text-center shadow-sm h-100">
+
+                <h4>Education & Youth</h4>
+
+                <p>
+                    Empowering young people through education,
+                    training and mentorship.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card p-4 text-center shadow-sm h-100">
+
+                <h4>Social Support</h4>
+
+                <p>
+                    Promoting welfare, unity and support
+                    for all community members.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+<!-- STATS -->
+
+<div class="stats-section text-white text-center mt-5">
+
+
+    <div class="container py-5">
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-3">
+                <h2>500+</h2>
+                <p>Members</p>
+            </div>
+
+            <div class="col-md-3">
+                <h2>5+</h2>
+                <p>Events</p>
+            </div>
+
+            <div class="col-md-3">
+                <h2>5+</h2>
+                <p>Projects</p>
+            </div>
+
+        </div>
+
+    </div>
+    
+
+</div>
+
+<!-- CURRENT EVENT -->
+<div class="container mt-5">
+
+    <h2 class="fw-bold mb-4">
+        Current Community Event
+    </h2>
+
+    <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+
+        <img src="{{ url_for('static', filename='images/events/flyer.jpeg') }}" class="img-fluid w-100"
+            style="height:500px; object-fit:cover;" alt="Domi Assamang Community Development Meeting Event">
+
+        <div class="card-body p-4">
+
+            <h3 class="fw-bold">
+                Community Growth In Christ Meeting
+            </h3>
+
+            <span class="badge bg-success mb-3">
+                Current Event
+            </span>
+
+            <p>
+                Join community leaders and members as we
+                discuss development projects, education,
+                health and future opportunities.
+            </p>
+
+            <hr>
+
+            <p><strong>📅 Date:</strong> May 18, 2026</p>
+
+            <p><strong>🕒 Time:</strong> 07:00 PM</p>
+
+            <p><strong>📍 Location:</strong>
+                Domi Assamang Community Funeral Grounds
+            </p>
+
+            <a href="/events" class="btn btn-success">
+                View All Events
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ABOUT -->
+
+<div class="container mt-5">
+
+
+    <div class="row align-items-center">
+
+        <div class="col-md-6">
+        
+            <h2 class="fw-bold">
+                About Our Community
+            </h2>
+        
+            <p class="mt-3">
+                Domi Assamang Community is built on unity, development,
+                and mutual support. We bring people together to improve
+                lives through education, social programs, community
+                collaboration, and sustainable development initiatives.
+            </p>
+        
+            <p>
+                Our community is committed to creating opportunities for
+                both young and old, promoting peace and harmony, and
+                encouraging active participation in activities that
+                contribute to the growth and wellbeing of every resident.
+            </p>
+        
+            <p>
+                Through collective effort, we continue to support
+                educational programs, infrastructure development,
+                health awareness campaigns, youth empowerment projects,
+                and welfare initiatives that strengthen our community
+                and improve the quality of life for all.
+            </p>
+        
+            <ul class="list-unstyled mt-4">
+        
+                <li>✔ Unity and cooperation among community members</li>
+        
+                <li>✔ Youth empowerment and leadership development</li>
+        
+                <li>✔ Educational support and scholarship initiatives</li>
+        
+                <li>✔ Community development and infrastructure projects</li>
+        
+                <li>✔ Welfare support for vulnerable members</li>
+        
+                <li>✔ Health awareness and social intervention programs</li>
+        
+                <li>✔ Promotion of culture, traditions, and values</li>
+        
+                <li>✔ Peaceful coexistence and community engagement</li>
+        
+            </ul>
+        
+        </div>
+
+        <div class="col-md-6">
+        
+            <img src="{{ url_for('static', filename='images/events/logo.jpeg') }}" class="img-fluid rounded shadow"
+                alt="Official logo of Domi Assamang Community">
+        
+        </div>
+
+    </div>
+
+
+</div>
+
+<!-- COMMUNITY GALLERY -->
+
+<div class="container mt-5">
+
+
+    <div class="text-center mb-5">
+
+        <h2 class="fw-bold">
+            Community Gallery
+        </h2>
+
+        <p class="text-muted">
+            Memories, celebrations and projects from
+            Domi Assamang Community.
+        </p>
+
+    </div>
+
+    <div id="galleryCarousel" class="carousel slide shadow rounded" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+            
+                <img src="{{ url_for('static', filename='images/gallery/logo.jpeg') }}" class="d-block w-100"
+                    style="height:550px; object-fit:cover;" alt="Community members participating in a development project">
+            
+            </div>
+            
+            <div class="carousel-item">
+            
+                <img src="{{ url_for('static', filename='images/gallery/flyer.jpeg') }}" class="d-block w-100"
+                    style="height:550px; object-fit:cover;" alt="Youth empowerment and educational activities in Domi Assamang">
+            
+            </div>
+            
+            <div class="carousel-item">
+            
+                <img src="{{ url_for('static', filename='images/gallery/flyer1.jpeg') }}" class="d-block w-100"
+                    style="height:550px; object-fit:cover;" alt="Community celebration and social gathering">
+            
+            </div>
+
+            <div class="carousel-item">
+            
+                <img src="{{ url_for('static', filename='images/gallery/image4.jpeg') }}" class="d-block w-100"
+                    style="height:550px; object-fit:cover;" alt="Community development activities and local engagement">
+            
+            </div>
+            
+            <div class="carousel-item">
+            
+                <img src="{{ url_for('static', filename='images/gallery/image5.jpeg') }}" class="d-block w-100"
+                    style="height:550px; object-fit:cover;" alt="Community members attending a public meeting">
+            
+            </div>
+            
+            <div class="carousel-item">
+            
+                <img src="{{ url_for('static', filename='images/gallery/image6.jpeg') }}" class="d-block w-100"
+                    style="height:550px; object-fit:cover;" alt="Educational support program for students">
+            
+            </div>
+            
+            <div class="carousel-item">
+            
+                <img src="{{ url_for('static', filename='images/gallery/image7.jpeg') }}" class="d-block w-100"
+                    style="height:550px; object-fit:cover;" alt="Community fundraising event">
+            
+            </div>
+            
+            <div class="carousel-item">
+            
+                <img src="{{ url_for('static', filename='images/projects/com lab.jpg') }}" class="d-block w-100"
+                    style="height:550px; object-fit:cover;" alt="Youth participating in community activities">
+            
+            </div>
+            
+            <div class="carousel-item">
+            
+                <img src="{{ url_for('static', filename='images/gallery/image9.jpeg') }}" class="d-block w-100"
+                    style="height:550px; object-fit:cover;" alt="Community leaders and residents meeting together">
+            
+            </div>
+            
+            <div class="carousel-item">
+            
+                <img src="{{ url_for('static', filename='images/gallery/image10.jpeg') }}" class="d-block w-100"
+                    style="height:550px; object-fit:cover;" alt="Volunteer work and community service">
+            
+            </div>
+            
+            <div class="carousel-item">
+            
+                <img src="{{ url_for('static', filename='images/gallery/image11.jpeg') }}" class="d-block w-100"
+                    style="height:550px; object-fit:cover;" alt="Community celebration and cultural activities">
+            
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+
+            <span class="carousel-control-prev-icon"></span>
+
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+
+            <span class="carousel-control-next-icon"></span>
+
+        </button>
+
+    </div>
+
+
+</div>
+
+<!-- CTA -->
+
+<div class="cta-section text-center text-white mt-5">
+
+
+    <div class="container py-5">
+
+        <h2>
+            Be Part of Our Growing Community
+        </h2>
+
+        <p>
+            Join us and contribute to development,
+            unity and social progress.
+        </p>
+
+    </div>
+
+</div>
+
+{% endblock %}

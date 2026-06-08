@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+
+    <!-- PAGE HEADER -->
+    <div class="text-center mb-5">
+
+        <h1 class="fw-bold">
+            Community Events
+        </h1>
+
+        <p class="text-muted">
+            Stay updated with all community meetings,
+            celebrations, educational programs and development activities.
+        </p>
+
+    </div>
+
+    <div class="row">
+
+        <!-- EVENT 1 -->
+        <div class="col-lg-6 mb-4">
+
+            <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100">
+
+                <img src="{{ url_for('static', filename='images/events/flyer.jpeg') }}" class="img-fluid w-100"
+                    style="height:300px; object-fit:cover;" alt="Community fundraising event flyer">
+
+                <div class="card-body">
+
+                    <h3 class="fw-bold">
+                        Seeking For Community Peace
+                    </h3>
+
+                    <span class="badge bg-success mb-3">
+                        Passed Event
+                    </span>
+
+                    <p>
+                        Join us as we pray for the community
+                        Seeking peace.
+                    </p>
+
+                    <hr>
+
+                    <p>
+                        📅 <strong>Date:</strong> May 18th - 20th , 2026
+                    </p>
+
+                    <p>
+                        🕒 <strong>Time:</strong> 09:00 AM and 07:00 PM
+                    </p>
+
+                    <p>
+                        📍 <strong>Location:</strong> Community Funeral Grounds
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- EVENT 2 -->
+        <div class="col-lg-6 mb-4">
+
+            <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100">
+
+                <img src="{{ url_for('static', filename='images/events/event.jpg') }}" class="img-fluid w-100"
+                    style="height:300px; object-fit:cover;" alt="Youth empowerment seminar">
+
+                <div class="card-body">
+
+                    <h3 class="fw-bold">
+                        Youth Empowerment Seminar
+                    </h3>
+
+                    <span class="badge bg-primary mb-3">
+                        Community Program
+                    </span>
+
+                    <p>
+                        Skills development, entrepreneurship,
+                        leadership and career guidance for young people.
+                    </p>
+
+                    <hr>
+
+                    <p>
+                        📅 <strong>Date:</strong> 2026
+                    </p>
+
+                    <p>
+                        🕒 <strong>Time:</strong> 2:00 PM
+                    </p>
+
+                    <p>
+                        📍 <strong>Location:</strong> Domi Assamang School Hall
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

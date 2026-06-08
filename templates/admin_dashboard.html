@@ -1,0 +1,244 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <!-- HEADER -->
+    <div class="text-center mb-4">
+        <h1 class="fw-bold">Admin Control Panel</h1>
+        <p class="text-muted">Manage all community content</p>
+    </div>
+
+    {% if session.get('role') == 'admin' %}
+
+    <!-- ================= STATS CARDS ================= -->
+    <div class="row g-3 mb-4">
+
+        <div class="col-md-3">
+            <div class="card p-3 shadow-sm text-center">
+                <h6>Users</h6>
+                <h3 class="fw-bold">{{ users_count if users_count else 0 }}</h3>
+
+                <a href="/admin/users" class="btn btn-sm btn-dark mt-2">
+                    View Users
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card p-3 shadow-sm text-center">
+                <h6>Events</h6>
+                <h3 class="fw-bold">{{ events_count if events_count else 0 }}</h3>
+
+                <a href="/events" class="btn btn-sm btn-primary mt-2">
+                    Manage
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card p-3 shadow-sm text-center">
+                <h6>Projects</h6>
+                <h3 class="fw-bold">{{ projects_count if projects_count else 0 }}</h3>
+
+                <a href="/projects" class="btn btn-sm btn-dark mt-2">
+                    Manage
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card p-3 shadow-sm text-center">
+                <h6>Gallery</h6>
+                <h3 class="fw-bold">{{ gallery_count if gallery_count else 0 }}</h3>
+
+                <a href="/gallery" class="btn btn-sm btn-info mt-2">
+                    Open Gallery
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ================= MAIN CONTROL GRID ================= -->
+    <div class="row g-3">
+
+        <!-- EVENTS -->
+        <div class="col-md-4">
+            <div class="card shadow-sm p-3 h-100">
+
+                <h5 class="mb-3">Events Management</h5>
+
+                <a href="/events" class="btn btn-primary w-100 mb-2">
+                    Manage Events
+                </a>
+
+                <a href="/create-event" class="btn btn-success w-100 mb-2">
+                    + Add Event
+                </a>
+
+                <a href="/events" class="btn btn-outline-warning w-100 mb-2">
+                    Edit Events
+                </a>
+
+                <a href="/events" class="btn btn-outline-danger w-100">
+                    Delete Events
+                </a>
+
+            </div>
+        </div>
+
+        <!-- PROJECTS -->
+        <div class="col-md-4">
+            <div class="card shadow-sm p-3 h-100">
+
+                <h5 class="mb-3">Projects Management</h5>
+
+                <a href="/projects" class="btn btn-dark w-100 mb-2">
+                    Manage Projects
+                </a>
+
+                <a href="/create-project" class="btn btn-warning w-100 mb-2">
+                    + Add Project
+                </a>
+
+                <a href="/projects" class="btn btn-outline-primary w-100 mb-2">
+                    Edit Projects
+                </a>
+
+                <a href="/projects" class="btn btn-outline-danger w-100">
+                    Delete Projects
+                </a>
+
+            </div>
+        </div>
+
+        <!-- GALLERY -->
+        <div class="col-md-4">
+            <div class="card shadow-sm p-3 h-100">
+
+                <h5 class="mb-3">Gallery Management</h5>
+
+                <a href="/gallery" class="btn btn-info w-100 mb-2">
+                    View Gallery
+                </a>
+
+                <a href="/upload-gallery" class="btn btn-primary w-100 mb-2">
+                    + Upload Image
+                </a>
+
+                <a href="/gallery" class="btn btn-outline-danger w-100">
+                    Delete Images
+                </a>
+
+            </div>
+        </div>
+
+        <!-- ANNOUNCEMENTS -->
+        <div class="col-md-4">
+            <div class="card shadow-sm p-3 h-100">
+
+                <h5 class="mb-3">Announcements</h5>
+
+                <a href="/announcements" class="btn btn-secondary w-100 mb-2">
+                    Manage Announcements
+                </a>
+
+                <a href="/create-announcement" class="btn btn-success w-100 mb-2">
+                    + Add Announcement
+                </a>
+
+                <a href="/announcements" class="btn btn-outline-warning w-100 mb-2">
+                    Edit Announcements
+                </a>
+
+                <a href="/announcements" class="btn btn-outline-danger w-100">
+                    Delete Announcements
+                </a>
+
+            </div>
+        </div>
+
+        <!-- USERS -->
+        <div class="col-md-4">
+            <div class="card shadow-sm p-3 h-100">
+
+                <h5 class="mb-3">User Management</h5>
+
+                <a href="/admin/users" class="btn btn-dark w-100 mb-2">
+                    Manage Users
+                </a>
+
+                <a href="/admin/users" class="btn btn-outline-primary w-100 mb-2">
+                    View Accounts
+                </a>
+
+                <a href="/admin/users" class="btn btn-outline-danger w-100">
+                    Remove Users
+                </a>
+
+            </div>
+        </div>
+
+        <!-- QUICK ACTIONS -->
+        <div class="col-md-4">
+            <div class="card shadow-sm p-3 h-100">
+
+                <h5 class="mb-3">Quick Actions</h5>
+
+                <a href="/create-event" class="btn btn-outline-success w-100 mb-2">
+                    Quick Event
+                </a>
+
+                <a href="/create-project" class="btn btn-outline-warning w-100 mb-2">
+                    Quick Project
+                </a>
+
+                <a href="/create-announcement" class="btn btn-outline-secondary w-100 mb-2">
+                    Quick Announcement
+                </a>
+
+                <a href="/" class="btn btn-outline-dark w-100">
+                    Visit Website
+                </a>
+
+            </div>
+        </div>
+
+        <!-- SESSION -->
+        <div class="col-md-4">
+            <div class="card shadow-sm p-3 text-center h-100">
+
+                <h5 class="mb-3">Session Control</h5>
+
+                <a href="/logout" class="btn btn-danger w-100 mb-2">
+                    Logout Admin
+                </a>
+
+                <a href="/" class="btn btn-outline-primary w-100">
+                    Back to Homepage
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+    {% else %}
+
+    <!-- NON ADMIN -->
+    <div class="alert alert-danger text-center mt-5">
+        <h4>Access Denied</h4>
+        <p>Only administrators can access this panel.</p>
+
+        <a href="/" class="btn btn-dark mt-2">
+            Return Home
+        </a>
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

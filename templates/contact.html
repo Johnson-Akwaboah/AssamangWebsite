@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- HEADER -->
+
+<div class="text-center p-5 bg-light rounded shadow-sm">
+
+    <h1 class="fw-bold">
+        Contact Us
+    </h1>
+
+    <p class="lead">
+        We are always ready to hear from you.
+        Send us a message or reach out directly.
+    </p>
+
+</div>
+
+<!-- CONTACT SECTION -->
+
+<div class="container mt-5">
+
+    <div class="row g-4">
+
+        <!-- CONTACT FORM -->
+        <div class="col-md-6">
+
+            <div class="card p-4 shadow-sm">
+
+                <h3 class="mb-3">
+                    Send a Message
+                </h3>
+
+                <form action="mailto:domiassamangcommunity@gmail.com" method="post" enctype="text/plain">
+
+                    <div class="mb-3">
+
+                        <label for="name" class="form-label">
+                            Full Name
+                        </label>
+
+                        <input type="text" id="name" name="Name" class="form-control" placeholder="Enter your full name"
+                            required>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label for="email" class="form-label">
+                            Email Address
+                        </label>
+
+                        <input type="email" id="email" name="Email" class="form-control"
+                            placeholder="Enter your email address" required>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label for="message" class="form-label">
+                            Your Message
+                        </label>
+
+                        <textarea id="message" name="Message" class="form-control" rows="5"
+                            placeholder="Type your message here..." required></textarea>
+
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">
+
+                        Send Message
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <!-- CONTACT INFO -->
+        <div class="col-md-6">
+
+            <div class="card p-4 shadow-sm h-100">
+
+                <h3>
+                    Contact Information
+                </h3>
+
+                <p>
+                    <strong>📍 Location:</strong>
+                    Domi Assamang, Ashanti Region-Ghana
+                </p>
+
+                <p>
+                    <strong>📞 Phone:</strong>
+                    0248663558
+                </p>
+
+                <p>
+                    <strong>📧 Email:</strong>
+                    domiassamangcommunity@gmail.com
+                </p>
+
+                <hr>
+
+                <h5>
+                    Follow Us
+                </h5>
+
+                <p>
+
+                    <a href="https://www.facebook.com/domiassamangcommunity" target="_blank"
+                        class="btn btn-outline-primary btn-sm me-2">
+
+                        Facebook
+
+                    </a>
+
+                    <a href="https://wa.me/233248663558" target="_blank" class="btn btn-outline-success btn-sm me-2">
+
+                        WhatsApp
+
+                    </a>
+
+                    <a href="https://www.youtube.com/@domiassamangcommunity" target="_blank"
+                        class="btn btn-outline-danger btn-sm">
+
+                        YouTube
+
+                    </a>
+
+                </p>
+
+                <hr>
+
+                <h5>
+                    Quick Support
+                </h5>
+
+                <p>
+                    For urgent issues, contact community leaders directly or
+                    send a WhatsApp message for faster response.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- LOCATION SECTION -->
+<div class="container mt-5">
+
+    <div class="card shadow-sm border-0">
+
+        <div class="card-body">
+
+            <h4 class="text-center fw-bold mb-3">
+                📍 Our Location
+            </h4>
+
+            <p class="text-center text-muted">
+                Domi Assamang Community, Ghana
+            </p>
+
+            <iframe src="https://www.google.com/maps?q=Domi%20Asamang%20Ghana&output=embed" width="100%" height="400"
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                title="Map showing Domi Assamang Community">
+            </iframe>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,8 +1,8 @@
 from flask import Flask, render_template
 import os
 import sys
-import webbrowser
-from threading import Timer
+# import webbrowser
+# from threading import Timer
 
 def resource_path(relative_path):
     try:
@@ -107,17 +107,10 @@ def leadership():
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
-# ==========================================
-# AUTO OPEN BROWSER
-# ==========================================
-def open_browser():
-    webbrowser.open("http://127.0.0.1:5000")
 
 # ==========================================
 # RUN APP
 # ==========================================
 if __name__ == '__main__':
-
-    Timer(1, open_browser).start()
 
     app.run(debug=True)
